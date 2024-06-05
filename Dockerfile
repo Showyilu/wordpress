@@ -9,6 +9,6 @@ COPY /upload.ini /usr/local/etc/php/conf.d
 
 RUN usermod -s /bin/bash www-data
 RUN chown www-data:www-data /var/www
-USER www-data:www-data
+# USER www-data:www-data
 
 CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
